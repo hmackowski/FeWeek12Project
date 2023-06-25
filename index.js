@@ -6,18 +6,7 @@ fetchUser().then((data) => {
   listUsers(data);
 });
 
-// When Save Button is Clicked event listener
-document.getElementById("save-button").addEventListener("click", function () {
-  // Get the user data from the form
-  let user = {
-    id: $(".userRow").attr("id"),
-    name: $("#name-text").val(),
-    job: $("#job-text").val(),
-    phoneNumber: $("#phone-text").val(),
-  };
 
-  console.log(user);
-});
 
 // Add Button event listener
 document.getElementById("add-button").addEventListener("click", function () {
@@ -60,7 +49,7 @@ document.getElementById("save-button").addEventListener("click", function () {
         listUsers(data);
         $("#save-button").attr("data-user-id", "null");
         $("#add-button").attr("class", "btn btn-success");
-
+        $("#cancel-button").remove();
         // Show success alert
         successAlert("User Updated Successfully!");
       });
@@ -118,8 +107,8 @@ function addNewUser(user) {
   // Check if all fields are complete
   if (
     $("#name-text").val() === "" ||
-    $("#name-text").val() === "" ||
-    $("#name-text").val() === ""
+    $("#job-text").val() === "" ||
+    $("#phone-text").val() === ""
   ) {
     // Show an alert message indicating that all fields must be complete
     emptyFieldsAlert();
