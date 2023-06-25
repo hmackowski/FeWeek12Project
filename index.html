@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  </head>
+
+  <body class="container" id="body-container">
+
+    <div class="header-container text-center" id="header-container">
+      <h2 id="header">User Data</h2>
+      <div id="body-container">
+        <!-- Content of the container -->
+      </div>
+    </div>
+
+    <div class="container col-" id="form-container">
+      <div class="mb-3 col-12">
+        <div class="row">
+          <div class="col-6">
+            <label for="name-text" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name-text"
+              placeholder="Name">
+          </div>
+          <div class="col-6">
+            <label for="job-text" class="form-label">Job</label>
+            <input type="job-text" class="form-control" id="job-text"
+              placeholder="Job">
+          </div>
+        </div>
+        <div class="row" id="phone-row">
+          <div class="mb-3 col-6" id="input-row">
+            <label for="phone-text" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone-text"
+              placeholder="Phone Number">
+          </div>
+          <div class="col-6" id="button-row"><br>
+            <button type="button" value="Add" class="btn btn-success"
+              id="add-button">Create</button>
+            <button type="button" value="Add"
+              class="btn btn-primary disabled save-button" id="save-button">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <div id="alert-container" class="content-center">
+        <!-- Alert messages will be displayed here -->
+      </div>
+    </div>
+
+    <div id="userTable">
+      <table class="table table-striped table-bordered table-hover table-dark"
+        id="table-container">
+        <thead>
+          <tr>
+            <th scope="col">ID #</th>
+            <th scope="col">Name</th>
+            <th scope="col">Job Title</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User data rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+  </body>
+
+</html>
